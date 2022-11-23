@@ -4,21 +4,19 @@ import {Image, Text, Button, View, StyleSheet, TouchableOpacity} from 'react-nat
 function Home({navigation}) {
     return (
         <View style={styles.container}>
-            <Image
+            <Image 
                 source={require('../assets/frog-1371919.png')}
-                style={{width:400,height:400}}
+                style={{width:400,height:400}}    
             />
             <TouchableOpacity
                 style={styles.buttoneContainer}
                 onPress={() => navigation.navigate('Layout')}
             >
-                <Text style={styles.buttonTest}>Go to Layout</Text>
+                <Text style={styles.buttonTest}>Go To Layout</Text>
             </TouchableOpacity>
         </View>
 
     );
-        
-
 }
 
 const styles = StyleSheet.create({
@@ -28,7 +26,6 @@ const styles = StyleSheet.create({
         alignItems:'center',
         backgroundColor:'#ebebeb'
     },
-
     buttoneContainer:{
         backgroundColor:'black',
         borderRadius:5,
@@ -39,6 +36,7 @@ const styles = StyleSheet.create({
     buttonTest:{
         fontSize:20,
         color:'#fff'
+
     }
 })
 
