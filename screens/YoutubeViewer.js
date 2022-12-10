@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, View, ScrollView, StyleSheet, Text, Image, ImageBackground, TextInput} from "react-native";
+import { Button, View, ScrollView, StyleSheet, Text, Image, ImageBackground, TextInput } from "react-native";
 import Constants from 'expo-constants';
 import { useState, useCallback } from "react";
 
@@ -19,20 +19,21 @@ const YoutubeViewer = (props) => {
       const togglePlaying = useCallback(() => {
         setPlaying((prev) => !prev);
       }, []);
+    
 
-    return(
+    return (
         <ScrollView>
             <YoutubePlayer
-             height={300}
-             play={playing}
-             videoId={playingVideoId}
-             onChangeState={onStateChange}
+                height={300}
+                play={playing}
+                videoId={playingVideoId}
+                onChangeState={onStateChange}
             />
             <Button title={playing ? "pause" : "play"} onPress={togglePlaying} />
             <TextInput
-            style={styles.input}
-            onChangeText={setPlayingVideoId}
-            value={playingVideoId}
+                style={styles.input}
+                onChangeText={setPlayingVideoId}
+                value={playingVideoId}
             />
         </ScrollView>
     )
